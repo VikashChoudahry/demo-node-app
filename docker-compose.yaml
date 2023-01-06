@@ -5,8 +5,8 @@ services:
     image: $IMAGE_NAME
     build:
       context: .
-      ports:
-        - "3000:3000"
+    ports:
+      - "3000:3000"
     volumes:
-      -./:/usr/src/app:delegated
+      - ./:/usr/src/app:delegated
     restart: unless-stopped
