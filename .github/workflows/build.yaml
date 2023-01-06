@@ -43,5 +43,4 @@ jobs:
           export IMAGE_NAME=$REGISTRY/$REPOSITORY:$IMAGE_TAG
           docker-compose build --no-cache
           docker images
-          # docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
-          docker push 303522029614.dkr.ecr.ap-south-1.amazonaws.com/demo-node-app:build-6
+          docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
