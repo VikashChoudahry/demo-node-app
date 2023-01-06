@@ -37,7 +37,6 @@ jobs:
                   REPOSITORY: ${{ secrets.AWS_ECR_REPOSITORY }}
                   IMAGE_TAG: build-${{ github.run_number }}
               run: |
-                  export GIT_PAT=${{ secrets.GIT_PAT }}
                   export IMAGE_NAME=$REGISTRY/$REPOSITORY:$IMAGE_TAG
                   docker-compose build --no-cache
                   docker images
